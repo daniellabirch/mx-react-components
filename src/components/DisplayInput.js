@@ -37,7 +37,7 @@ const DisplayInput = React.createClass({
 
   componentWillMount () {
     this._labelId = _uniqueId('DI');
-    this._inputId = _uniqueId('DI');
+    this._inputId = this.props.elementProps.id || _uniqueId('DI');
   },
 
   _isLargeOrMediumWindowSize () {
