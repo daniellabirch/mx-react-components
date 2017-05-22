@@ -211,10 +211,15 @@ class Button extends React.Component {
         color: this.props.primaryColor,
         fill: this.props.primaryColor,
         ':hover': !this._isLargeOrMediumWindowSize() ? null : {
-          backgroundColor: StyleConstants.Colors.PORCELAIN
+          backgroundColor: this.props.primaryColor,
+          color: StyleConstants.Colors.WHITE,
+          fill: StyleConstants.Colors.WHITE
         },
         ':active': {
-          backgroundColor: StyleConstants.adjustColor(StyleConstants.Colors.PORCELAIN, -15)
+          backgroundColor: StyleConstants.adjustColor(this.props.primaryColor, -30),
+          borderColor: StyleConstants.adjustColor(this.props.primaryColor, -30),
+          color: StyleConstants.Colors.WHITE,
+          fill: StyleConstants.Colors.WHITE
         }
       },
       disabled: {
